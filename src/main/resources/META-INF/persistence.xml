@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd"
+             version="1.0">
+    <persistence-unit name="lichking">
+        <provider>org.datanucleus.api.jpa.PersistenceProviderImpl</provider>
+        <!--<class>au.com.iglooit.hellscream.model.entity.BaseEntity</class>-->
+        <!--<class>au.com.iglooit.hellscream.model.entity.Merchant</class>-->
+        <!--<class>au.com.iglooit.hellscream.model.entity.IGUser</class>-->
+        <!--<class>au.com.iglooit.hellscream.model.entity.Category</class>-->
+        <!--<class>au.com.iglooit.hellscream.model.entity.CategoryGroup</class>-->
+        <!--<class>au.com.iglooit.hellscream.model.entity.Quote</class>-->
+        <!--<class>au.com.iglooit.hellscream.model.entity.QuoteTransaction</class>-->
+        <!--<class>au.com.iglooit.hellscream.model.entity.QuoteFeedbackMsg</class>-->
+        <!--<class>au.com.iglooit.hellscream.model.entity.MerchantFeedbackMsg</class>-->
+        <!--<class>au.com.iglooit.hellscream.model.entity.Suburb</class>-->
+        <!--<class>au.com.iglooit.hellscream.model.entity.QuoteContactMsg</class>-->
+        <exclude-unlisted-classes>true</exclude-unlisted-classes>
+        <properties>
+            <property name="datanucleus.NontransactionalRead" value="true"/>
+            <property name="datanucleus.NontransactionalWrite" value="true"/>
+            <property name="datanucleus.appengine.datastoreEnableXGTransactions" value="true" />
+            <property name="datanucleus.ConnectionURL" value="appengine"/>
+        </properties>
+    </persistence-unit>
+</persistence>

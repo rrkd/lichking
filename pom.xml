@@ -9,12 +9,12 @@
     <artifactId>lichking</artifactId>
 
     <properties>
-        <app.id>the-geode-573</app.id>
+        <app.id>dulcet-glazing-737</app.id>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <gae.version>1.8.5</gae.version>
         <spring.version>3.1.0.RELEASE</spring.version>
         <gae.application.version>1.0</gae.application.version>
-        <gae.port>7916</gae.port>
+        <gae.port>7912</gae.port>
         <commons-collections-version>3.2.1</commons-collections-version>
         <sitemesh-version>2.4.2</sitemesh-version>
         <jstl.version>1.2</jstl.version>
@@ -101,7 +101,7 @@
                         <jvmFlag>-Ddatastore.backing_store=${project.basedir}/local_db.bin</jvmFlag>
                         <jvmFlag>-Ddatastore.default_high_rep_job_policy_unapplied_job_pct=20</jvmFlag>
                         <jvmFlag>-Xdebug</jvmFlag>
-                        <jvmFlag>-agentlib:jdwp=transport=dt_socket,address=7917,server=y,suspend=n</jvmFlag>
+                        <jvmFlag>-agentlib:jdwp=transport=dt_socket,address=7913,server=y,suspend=n</jvmFlag>
                     </jvmFlags>
                     <fullScanSeconds>1</fullScanSeconds>
                 </configuration>
@@ -141,7 +141,7 @@
                 <version>3.3.0-release</version>
                 <configuration>
                     <api>JPA</api>
-                    <persistenceUnitName>hellscream</persistenceUnitName>
+                    <persistenceUnitName>lichking</persistenceUnitName>
                     <log4jConfiguration>src/main/resources/log4j.properties</log4jConfiguration>
                     <verbose>true</verbose>
                 </configuration>
@@ -172,28 +172,28 @@
                 </dependencies>
             </plugin>
 
-                <plugin>
-                    <groupId>ro.isdc.wro4j</groupId>
-                    <artifactId>wro4j-maven-plugin</artifactId>
-                    <version>${wro4j.version}</version>
-                    <executions>
-                        <execution>
-                            <phase>compile</phase>
-                            <goals>
-                                <goal>run</goal>
-                            </goals>
-                        </execution>
-                    </executions>
-                    <configuration>
-                        <!--<targetGroups>basic-header.min,basic-footer.min,feedback.min</targetGroups>-->
-                        <minimize>${minify}</minimize>
-                        <destinationFolder>${basedir}/src/main/webapp/WEB-INF/assets/wro/</destinationFolder>
-                        <contextFolder>${basedir}/src/main/webapp/WEB-INF/assets/</contextFolder>
-                        <wroFile>${basedir}/src/main/webapp/WEB-INF/wro.xml</wroFile>
-                        <wroManagerFactory>ro.isdc.wro.maven.plugin.manager.factory.ConfigurableWroManagerFactory</wroManagerFactory>
-                        <ignoreMissingResources>true</ignoreMissingResources>
-                    </configuration>
-                </plugin>
+                <!--<plugin>-->
+                    <!--<groupId>ro.isdc.wro4j</groupId>-->
+                    <!--<artifactId>wro4j-maven-plugin</artifactId>-->
+                    <!--<version>${wro4j.version}</version>-->
+                    <!--<executions>-->
+                        <!--<execution>-->
+                            <!--<phase>compile</phase>-->
+                            <!--<goals>-->
+                                <!--<goal>run</goal>-->
+                            <!--</goals>-->
+                        <!--</execution>-->
+                    <!--</executions>-->
+                    <!--<configuration>-->
+                        <!--&lt;!&ndash;<targetGroups>basic-header.min,basic-footer.min,feedback.min</targetGroups>&ndash;&gt;-->
+                        <!--<minimize>${minify}</minimize>-->
+                        <!--<destinationFolder>${basedir}/src/main/webapp/WEB-INF/assets/wro/</destinationFolder>-->
+                        <!--<contextFolder>${basedir}/src/main/webapp/WEB-INF/assets/</contextFolder>-->
+                        <!--<wroFile>${basedir}/src/main/webapp/WEB-INF/wro.xml</wroFile>-->
+                        <!--<wroManagerFactory>ro.isdc.wro.maven.plugin.manager.factory.ConfigurableWroManagerFactory</wroManagerFactory>-->
+                        <!--<ignoreMissingResources>true</ignoreMissingResources>-->
+                    <!--</configuration>-->
+                <!--</plugin>-->
 
 
             <!--<plugin>-->
@@ -522,6 +522,12 @@
             <groupId>au.com.iglooit</groupId>
             <artifactId>facebook4j</artifactId>
             <version>1.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-codec</groupId>
+            <artifactId>commons-codec</artifactId>
+            <version>1.9</version>
         </dependency>
 
     </dependencies>
