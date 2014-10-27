@@ -530,6 +530,12 @@
             <version>1.9</version>
         </dependency>
 
+        <dependency>
+            <groupId>paypal-core</groupId>
+            <artifactId>paypal-core</artifactId>
+            <version>1.0</version>
+        </dependency>
+
     </dependencies>
 
     <repositories>

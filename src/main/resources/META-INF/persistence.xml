@@ -4,17 +4,12 @@
              version="1.0">
     <persistence-unit name="lichking">
         <provider>org.datanucleus.api.jpa.PersistenceProviderImpl</provider>
-        <!--<class>au.com.iglooit.hellscream.model.entity.BaseEntity</class>-->
-        <!--<class>au.com.iglooit.hellscream.model.entity.Merchant</class>-->
-        <!--<class>au.com.iglooit.hellscream.model.entity.IGUser</class>-->
-        <!--<class>au.com.iglooit.hellscream.model.entity.Category</class>-->
-        <!--<class>au.com.iglooit.hellscream.model.entity.CategoryGroup</class>-->
-        <!--<class>au.com.iglooit.hellscream.model.entity.Quote</class>-->
-        <!--<class>au.com.iglooit.hellscream.model.entity.QuoteTransaction</class>-->
-        <!--<class>au.com.iglooit.hellscream.model.entity.QuoteFeedbackMsg</class>-->
-        <!--<class>au.com.iglooit.hellscream.model.entity.MerchantFeedbackMsg</class>-->
-        <!--<class>au.com.iglooit.hellscream.model.entity.Suburb</class>-->
-        <!--<class>au.com.iglooit.hellscream.model.entity.QuoteContactMsg</class>-->
+        <class>au.com.iglooit.lichking.model.entity.Application</class>
+        <class>au.com.iglooit.lichking.model.entity.ApplicationOwnUser</class>
+        <class>au.com.iglooit.lichking.model.entity.UnSearchEntity</class>
+        <class>au.com.iglooit.lichking.model.entity.PaymentTransaction</class>
+        <class>au.com.iglooit.lichking.model.entity.BaseEntity</class>
+
         <exclude-unlisted-classes>true</exclude-unlisted-classes>
         <properties>
             <property name="datanucleus.NontransactionalRead" value="true"/>

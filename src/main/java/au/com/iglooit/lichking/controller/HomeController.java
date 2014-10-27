@@ -18,4 +18,14 @@ public class HomeController {
     public String help() {
         return "This is weixin test server";
     }
+
+    @RequestMapping(value = "/index", method = RequestMethod.GET)
+    public String index() {
+        return "index";
+    }
+
+    @RequestMapping(value = "/dashboard", method = RequestMethod.GET)
+    public String dashboard() {
+        return "dashboard";
+    }
 }

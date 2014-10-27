@@ -1,0 +1,12 @@
+<decorators defaultdir="/WEB-INF/decorators">
+    <!-- management -->
+    <decorator name="login" page="index_tp.jsp">
+        <pattern>/index</pattern>
+        <pattern>/home</pattern>
+        <pattern>/dashboard</pattern>
+    </decorator>
+    <!-- payment -->
+    <decorator name="payment" page="payment_tp.jsp">
+        <pattern>/paymentSuccess</pattern>
+    </decorator>
+</decorators>

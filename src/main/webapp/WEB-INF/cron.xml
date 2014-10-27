@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cronentries>
+    <cron>
+        <url>/ws/version</url>
+        <description>Repopulate the cache every 3 minutes</description>
+        <schedule>every 3 minutes</schedule>
+    </cron>
+    <cron>
+        <url>/ws/version</url>
+        <description>Repopulate the cache every 5 minutes</description>
+        <schedule>every 5 minutes</schedule>
+    </cron>
+    <cron>
+        <url>/ws/checkExpiredUser</url>
+        <description>check expired user per day</description>
+        <schedule>every day 00:00</schedule>
+    </cron>
+    <cron>
+        <url>/ws/version</url>
+        <description>Repopulate the cache every 11 minutes</description>
+        <schedule>every 11 minutes</schedule>
+    </cron>
+    <cron>
+        <url>/_ah/sessioncleanup?clear</url>
+        <description>Clean up sessions</description>
+        <schedule>every 60 minutes</schedule>
+    </cron>
+</cronentries>

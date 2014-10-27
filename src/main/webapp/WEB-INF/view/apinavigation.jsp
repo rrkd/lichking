@@ -1,0 +1,12 @@
+<a href="/pay">Pay</a> |
+<a href="/setPaymentOptions">SetPaymentOptions</a> |
+<a href="/getPaymentOptions">GetPaymentOptions</a> |
+<a href="/executePayment">ExecutePayment</a> |
+<a href="/payDetails">PayDetails</a> |
+<a href="/preapproval">Preapproval</a> |
+<a href="/preapprovalDetails">PreapprovalDetails</a> |
+<a href="/cancelPreapproval">CancelPreapproval</a> |
+<a href="/refund">Refund</a> |
+<a href="/currencyConversion">CurrencyConversion</a> |
+<a href="/getFundingPlans">GetFundingPlans</a> |
+<a href="/getShippingAddresses">GetShippingAddresses</a> |
