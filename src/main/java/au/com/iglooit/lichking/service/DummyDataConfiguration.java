@@ -34,6 +34,11 @@ public class DummyDataConfiguration {
     }
 
     private void initDummyConfig() {
+        generateHuafuTestData();
+        generateLocalTestDate();
+    }
+
+    private void generateLocalTestDate() {
         Application application = applicationDAO.findByUrl(TEST_APPLICATION_URL);
         if(application == null) {
             application = new Application();
@@ -47,6 +52,24 @@ public class DummyDataConfiguration {
         else {
             application.setPaypalEmail("zumaexhaust-facilitator@gmail.com");
             applicationDAO.update(application);
+        }
+    }
+
+    private void generateHuafuTestData() {
+        Application application = applicationDAO.findByUrl("spring-forest-538.appspot.com");
+        if(application == null) {
+            application = new Application();
+            application.setApplicationName("test");
+            application.setApplicationType(ApplicationType.Register);
+            application.setApplicationURL("spring-forest-538.appspot.com");
+            application.setToken("testtoken");
+            application.setUserCount(0L);
+            application.setPaypalEmail("zumaexhaust-facilitator@gmail.com");
+            applicationDAO.createApplication(application);
+        }
+        else {
+//            application.setPaypalEmail("zumaexhaust-facilitator@gmail.com");
+//            applicationDAO.update(application);
         }
     }
 }
