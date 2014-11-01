@@ -12,7 +12,7 @@
         <input name='money' value='1.0'>
         <input name='description' value='This is the test process'>
         <input name='callback' value='/app/paymentTestCB'>
-        <input name='applicationId' value='ahJkdWxjZXQtZ2xhemluZy03MzdyGAsSC0FwcGxpY2F0aW9uGICAgICAgIALDA'>
+        <input name='applicationId' value='www.test.com'>
         <input name='applicationToken' value='testtoken'>
 
         <input id="std_pay_button" type="submit" value="Submit">

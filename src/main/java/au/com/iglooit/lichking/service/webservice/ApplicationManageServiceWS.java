@@ -31,22 +31,22 @@ public class ApplicationManageServiceWS {
     @RequestMapping(value = "/app/ownuser", method = RequestMethod.POST, headers = {"Content-Type=application/json"})
     @ResponseBody
     public JsonResponse createOwnUser(@RequestBody ApplicationCreateUserRequest request) {
-        Application application = applicationDAO.findByKey(KeyFactory.stringToKey(request.getApplicationId()));
+        Application application = applicationDAO.findByUrl(request.getApplicationId());
 
         applicationOwnUserManageService.createOwnUser(application, request.getUserId(), request.getPaypalEmail(),
                 FeeType.valueOf(request.getFeeType()));
         return new JsonResponse(JsonResponse.OK, "");
     }
 
-    @RequestMapping(value = "/app/ownuser", method = RequestMethod.GET)
-    @ResponseBody
-    public ApplicationCreateUserRequest test() {
-        ApplicationCreateUserRequest request = new ApplicationCreateUserRequest();
-        request.setFeeType(FeeType.Annual.name());
-        request.setPaypalEmail("");
-        request.setUserId("1000");
-        request.setApplicationId("ddddd");
-        request.setApplicationToken("testtoken");
-        return request;
-    }
+//    @RequestMapping(value = "/app/ownuser/", method = RequestMethod.GET)
+//    @ResponseBody
+//    public ApplicationCreateUserRequest test() {
+//        ApplicationCreateUserRequest request = new ApplicationCreateUserRequest();
+//        request.setFeeType(FeeType.Annual.name());
+//        request.setPaypalEmail("");
+//        request.setUserId("1000");
+//        request.setApplicationId("ddddd");
+//        request.setApplicationToken("testtoken");
+//        return request;
+//    }
 }

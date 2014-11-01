@@ -40,7 +40,7 @@ public class ApplicationPayController {
     private PaymentDetailHelper paymentDetailHelper;
 
     @RequestMapping(value = "/app/pay", method = RequestMethod.POST)
-    public ModelAndView createOwnUser(@ModelAttribute("request") ApplicationPayRequest request, HttpServletRequest req,
+    public ModelAndView pay(@ModelAttribute("request") ApplicationPayRequest request, HttpServletRequest req,
                                       HttpServletResponse resp) throws PaymentException {
         try {
             PayRequest payRequest = paymentDetailHelper.generatePaymentDetails(request, req);

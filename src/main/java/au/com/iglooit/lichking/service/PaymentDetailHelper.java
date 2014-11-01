@@ -35,7 +35,7 @@ public class PaymentDetailHelper {
     private PaymentTransactionDAO paymentTransactionDAO;
 
     public PayRequest generatePaymentDetails(ApplicationPayRequest request, HttpServletRequest req) {
-        Application application = applicationDAO.findByKey(KeyFactory.stringToKey(request.getApplicationId()));
+        Application application = applicationDAO.findByUrl(request.getApplicationId());
 
         // start a new payment transaction
         PaymentTransaction transaction = new PaymentTransaction();
